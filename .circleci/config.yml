@@ -38,4 +38,4 @@ jobs:
       # lint
       # - run: npm run lint
       # build dist
-      - run: yarn build
+      # - run: yarn build
