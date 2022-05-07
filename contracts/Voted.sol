@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
 
 contract Voted is Ownable {
     // Declare a set state variable
-    EnumerableMap.UintToAddressMap private users;
+    EnumerableMap.UintToAddressMap public users;
 
     constructor() {
         console.log("Deploy voting:");
