@@ -10,7 +10,7 @@ contract Voted is Ownable {
     EnumerableMap.AddressToUintMap private users;
 
     constructor() {
-        console.log("Deploy voting:");
+        // console.log("Deploy voting:");
     }
 
     function addUser(address addr) public /*onlyOwner*/ {
@@ -19,9 +19,10 @@ contract Voted is Ownable {
         users.set(addr, 1);
     }
 
-    function checkUserExists(address addr) public returns (bool) {
+    function checkUserExists(address addr) public view returns (bool) {
         console.log("Check user in list");
         console.log(addr);
+        console.log(users.contains(addr));
         return users.contains(addr);
     }
 
