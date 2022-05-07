@@ -13,10 +13,16 @@ contract Voted is Ownable {
         console.log("Deploy voting:");
     }
 
-    function addUser(address addr) public onlyOwner {
+    function addUser(address addr) public /*onlyOwner*/ {
         console.log("Adding user to list");
         console.log(addr);
         users.set(addr, 1);
+    }
+
+    function checkUserExists(address addr) public returns (bool) {
+        console.log("Check user in list");
+        console.log(addr);
+        return users.contains(addr);
     }
 
 }
