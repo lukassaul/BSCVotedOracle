@@ -31,5 +31,25 @@ describe("Voted", function () {
 
     let res = await contract.publicKey() 
     console.log(res)
+
+
+
+
+    // const EthCrypto = require('eth-crypto');
+//     const signature = EthCrypto.sign(
+//     alice.privateKey,
+//     EthCrypto.hash.keccak256(secretMessage)
+// );
+// const payload = {
+//     message: secretMessage,
+//     signature
+// };
+// const encrypted = await EthCrypto.encryptWithPublicKey(
+//     bob.publicKey, // by encrypting with bobs publicKey, only bob can decrypt the payload with his privateKey
+//     JSON.stringify(payload) // we have to stringify the payload before we can encrypt it
+// );
+
+
+
   });
 });
